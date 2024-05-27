@@ -1,13 +1,22 @@
 # Базовый образ с Node.js и npm
-FROM node:alpine
+# Используем базовый образ Nginx
+FROM nginx:latest
 
-WORKDIR /RitualCompassFrontendProd
+# Копируем конфигурацию Nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY . .
+# Копируем файлы вашего Node.js приложения
+COPY . /app
+WORKDIR /app
 
+# Устанавливаем Node.js и зависимости
+RUN apt-get update && apt-get install -y nodejs npm
 RUN npm install
 
-
-EXPOSE 3000
-
+# Собираем и запускаем Node.js приложение
+RUN npm run build
 CMD ["npm", "start"]
+
+# Открываем порты для HTTP и HTTPS
+EXPOSE 80
+EXPOSE 443
