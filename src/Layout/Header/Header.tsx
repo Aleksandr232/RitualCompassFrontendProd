@@ -16,9 +16,9 @@ const Header: FC<IHeaderProps> = (props) => {
         <Navigation />
       </nav>
 
-      <div className={styles.auth}>
+     {/*  <div className={styles.auth}>
         <AuthWrapper />
-      </div>
+      </div> */}
     </header>
   );
 };
