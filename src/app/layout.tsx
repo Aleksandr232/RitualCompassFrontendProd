@@ -4,7 +4,7 @@ import "./globals.css";
 // import Header from "@/Layout/Header/Header";
 import StoreProvider from "./StoreProvider";
 
-const OpenSans = Montserrat({
+const MontserratFamily = Montserrat({
   subsets: ["cyrillic"],
   weight: ["400", "600", "800"],
 });
@@ -12,6 +12,12 @@ const OpenSans = Montserrat({
 export const metadata: Metadata = {
   title: "Организация похорон в Казани",
   description: "Бесплатная помощь в организации похорон в Казани",
+  keywords: [
+    "Ритуальные услуги",
+    "Организация похорон в Казани",
+    "Похороны",
+    "Памятники",
+  ],
 };
 
 export default function RootLayout({
@@ -21,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={OpenSans.className}>
+      <body className={MontserratFamily.className}>
         <StoreProvider>
           {/* <Header /> */}
           {children}

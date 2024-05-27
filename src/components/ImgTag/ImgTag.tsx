@@ -13,7 +13,7 @@ interface IImgTag
 
 const ImgTag: FC<IImgTag> = ({ url, alt, width, height }) => {
   return (
-    <picture>
+    <picture style={{ display: "flex", justifyContent: "center" }}>
       <source srcSet={url} type="image/avif" />
       <source srcSet={url} type="image/webp" />
       <img src={url} alt={alt} width={width} height={height} />

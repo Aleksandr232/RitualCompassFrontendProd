@@ -1,34 +1,70 @@
-
 .link {
-    border: none;
-    height: 50px;
-    background: var(--accent-color);
-    color: var(--text-button-color);
-    text-align: center;
-    white-space: nowrap;
-    text-decoration: none;
-    text-transform: uppercase;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 50px;
+  border: none;
+  height: 50px;
+  background: var(--accent-color);
+  color: var(--text-button-color);
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 50px;
 }
 
-
 .small {
-    width: 75px;
-  }
-  
-  .medium {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 50px;
-    width: 150px;
-  }
-  
-  .large {
-    width: 245px;
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 50px;
-  }
+  width: 75px;
+}
+
+.medium {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 50px;
+  width: 150px;
+}
+
+.large {
+  width: 245px;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 50px;
+}
+.ghost,
+.ghostBorder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  line-height: 50px;
+  padding: 15px;
+  border: 0.3rem solid var(--accent-color);
+}
+.ghostBorder {
+  font-size: 16px;
+  width: 150px;
+  background: none;
+  color: var(--accent-color);
+}
+
+.ghost {
+  background: none;
+  color: var(--accent-color);
+  border: none;
+}
+
+.ghost:hover,
+.ghostBorder:hover {
+  transform: scale(1.1);
+  transition: background 1s ease, color 0.3s ease, transform 1s ease;
+  background: var(--accent-color);
+  color: var(--text-button-color);
+}
+
+.isActive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--accent-color);
+  color: var(--text-button-color);
+}

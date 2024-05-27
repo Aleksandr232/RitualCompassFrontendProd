@@ -6,6 +6,7 @@ import Button from "@/components/Button/Button";
 import Link from "next/link";
 import ModalWindow from "../Modal/ModalQuickRequest/ModalQuickRequest";
 import LinkTag from "@/components/LinkTag/LinkTag";
+import { routers } from "@/utils/routers";
 
 const OurServices: FC = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -19,7 +20,7 @@ const OurServices: FC = () => {
         <div className={styles.service_item}>
           <Htag tag={"h3"}>Помощь в поиске ритуальной компании или агента</Htag>
           <Ptag size="medium">Мы все сделаем за вас</Ptag>
-          <LinkTag url="tel:+1234567890" appearance={"medium"}>
+          <LinkTag url={routers.telephone} appearance={"medium"}>
             Позвонить
           </LinkTag>
         </div>
@@ -38,8 +39,22 @@ const OurServices: FC = () => {
           <Ptag size="medium">
             Куда идти, за что платить и что делать в случае смерти человека
           </Ptag>
-          <LinkTag url="tel:+1234567890" appearance={"medium"}>
+          <LinkTag url={routers.telephone} appearance={"medium"}>
             Позвонить
+          </LinkTag>
+        </div>
+        <div className={styles.service_item}>
+          <Htag tag={"h3"}>Мгновенная помощь ( БОТ )</Htag>
+          <Ptag size="medium">
+            Обратитесь к нашему онлайн помощнику и он ответит на вопросы
+          </Ptag>
+          <LinkTag
+            url={routers.telegram}
+            target="_blank"
+            rel="noopener noreferrer"
+            appearance={"medium"}
+          >
+            Написать
           </LinkTag>
         </div>
       </div>

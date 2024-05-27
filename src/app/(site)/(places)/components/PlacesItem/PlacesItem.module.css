@@ -1,0 +1,21 @@
+.items_wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.item {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
+  padding: 20px;
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 20px;
+}

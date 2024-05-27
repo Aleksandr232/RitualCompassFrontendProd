@@ -7,7 +7,6 @@
 }
 body {
   background-color: #d9d7e091;
-  
 }
 
 .dark {
@@ -70,9 +69,9 @@ a {
   color: var(--text-color);
   text-decoration: dashed;
 }
-/* img {
-  object-fit: cover;
-} */
+ul > li {
+  list-style-type: none;
+}
 
 button:hover {
   background: #f1a73f;

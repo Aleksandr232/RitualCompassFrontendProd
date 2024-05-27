@@ -1,54 +1,23 @@
-"use client";
-
-import { FC, useEffect, useState } from "react";
+import { FC} from "react";
 import { IHeaderProps } from "./Header.props";
 import styles from "./Header.module.css";
-import Cookies from "js-cookie";
-import Button from "@/components/Button/Button";
 import Htag from "@/components/Htag/Htag";
-import LinkTag from "@/components/LinkTag/LinkTag";
+import Navigation from "../components/Navigation/Navigation";
+import AuthWrapper from "../components/AuthWrapper/AuthWrapper";
 
 const Header: FC<IHeaderProps> = (props) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = Cookies.get("token");
-    console.log(token);
-
-    setIsAuthenticated(!!token);
-  }, []);
-
-  const handleLogout = () => {
-    Cookies.remove("token");
-    setIsAuthenticated(false);
-  };
-
   return (
     <header className={styles.header} {...props}>
-      <div style={{ display: "flex", gap: "30px" }}>
+      <div className={styles.logo_wrapper}>
         <Htag tag="h2">Оказание бесплатной ритуальной помощи в г.Казань</Htag>
-        <nav style={{ width: "100%" }}>
-          <ul style={{ display: "flex", gap: "30px" }}>
-            <li>туда сюда</li>
-            <li>сюда туда </li>
-            <li>тут</li>
-          </ul>
-        </nav>
+      </div>
 
-        <div style={{ display: "flex", gap: "30px" }}>
-          {!isAuthenticated ? (
-            <>
-              <LinkTag url="/login" appearance="medium">
-                Войти
-              </LinkTag>
-              <LinkTag url="/registration" appearance="medium">
-                registration
-              </LinkTag>
-            </>
-          ) : (
-            <Button appearance="medium" onClick={handleLogout}>Выйти</Button>
-          )}
-        </div>
+      <nav className={styles.navigation}>
+        <Navigation />
+      </nav>
+
+      <div className={styles.auth}>
+        <AuthWrapper />
       </div>
     </header>
   );

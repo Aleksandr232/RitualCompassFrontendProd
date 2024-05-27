@@ -8,8 +8,6 @@ import cn from "classnames";
 
 const AddCompanyForm: FC<IAddCompanyForm> = ({
   submitForm,
-  isError,
-  isSuccess,
   CloseFormDateSeconds,
   messageValidation,
 }) => {

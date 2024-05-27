@@ -1,0 +1,13 @@
+.telephone {
+  border: 0.3rem solid var(--accent-color);
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.telephone:hover {
+  transform: scale(1.1);
+  transition: background 1s ease, color 0.3s ease, transform 1s ease;
+  background: var(--accent-color);
+  color: var(--text-button-color);
+}

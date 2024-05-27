@@ -1,0 +1,12 @@
+.company_details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+@media (max-width: 735px) {
+  .company_details {
+    flex-direction: column;
+    align-items: center;
+  }
+}

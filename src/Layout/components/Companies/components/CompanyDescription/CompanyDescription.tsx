@@ -12,21 +12,20 @@ const CompanyDescription: FC<ICompanyDescriptionProps> = ({
 }) => {
   return (
     <>
-      <div>
-        <span className={styles.company_details}>
-          Адрес:
-          <Ptag size="medium">{address_ritual}</Ptag>
-        </span>
+      <span className={styles.company_details}>
+        Адрес:
+        <Ptag size="medium">{address_ritual}</Ptag>
+      </span>
 
-        <span className={styles.company_details}>
-          Режим работы:
-          <Ptag size="small">{work_time_ritual}</Ptag>
-        </span>
-        <span className={styles.company_details}>
-          Услуги:
-          <Ptag size="medium">{service_ritual}</Ptag>
-        </span>
-      </div>
+      <span className={styles.company_details}>
+        Режим работы:
+        <Ptag size="small">{work_time_ritual}</Ptag>
+      </span>
+      <span className={styles.company_details}>
+        Услуги:
+        <Ptag size="medium">{service_ritual}</Ptag>
+      </span>
+
       <Contact companyId={company_id} />
     </>
   );

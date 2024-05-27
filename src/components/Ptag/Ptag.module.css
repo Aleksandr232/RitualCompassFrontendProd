@@ -1,41 +1,40 @@
 .p {
-    color: var(--text-color);
-    font-weight: 400;
-    line-height: 24px;
-    text-align: left;
-    word-break: break-all;
-  }
-  
-  .small {
-    color: var(--text-color);
-    font-size: 14px;
-    line-height: 24px;
-  }
-  .medium {
-    color: var(--text-color);
-    font-size: 16px;
-  }
-  .large {
-    color: var(--text-color);
-    font-size: 18px;
-    line-height: 29px;
-  }
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  word-break: break-all;
+}
 
-  .isError{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid red;
-    border-radius: 20px;
-    background-color: #e67b7b;
-    color: var(--text-color);
-    text-align: center;
-  }
-  .isSuccess{
-    margin: 10px;
-    padding: 10px;
-    border: 2px solid green;
-    border-radius: 20px;
-    background-color: #22e210;
-    color: var(--text-color);
-    text-align: center;
-  }
+.small {
+  color: var(--text-color);
+  font-size: 0.875rem;
+}
+.medium {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+.large {
+  color: var(--text-color);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.isError {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid red;
+  border-radius: 20px;
+  background-color: #e67b7b;
+  color: var(--text-color);
+  text-align: center;
+}
+.isSuccess {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid green;
+  border-radius: 20px;
+  background-color: #22e210;
+  color: var(--text-color);
+  text-align: center;
+}
