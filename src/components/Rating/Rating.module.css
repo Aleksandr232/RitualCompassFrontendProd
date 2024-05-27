@@ -1,0 +1,13 @@
+.fill > svg {
+    fill: var(--accent-color);
+    
+  }
+  
+  .editable svg {
+    cursor: pointer;
+  
+  }
+  
+  .span{
+    padding-right: 5px;
+  }

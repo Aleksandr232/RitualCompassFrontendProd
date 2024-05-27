@@ -1,0 +1,109 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #d9d7e091;
+  
+}
+
+.dark {
+  background-color: black;
+}
+
+.dark .Ptag_p___PB0b Ptag_large__BjPxb {
+  color: white;
+}
+
+.dark .Funeral_ompanies_company_wrapper__eUij_ {
+  background: #2c3e50;
+}
+
+.dark .Ptag_medium__7vkyj {
+  color: white;
+}
+
+.dark h2 {
+  color: white;
+}
+
+.dark .Funeral_ompanies_company_description__vUz0V {
+  color: white;
+}
+
+.dark .Ptag_small__iFE0Y {
+  color: white;
+}
+
+.dark .Funeral_ompanies_company_full_description__U_3FC {
+  border-top: 2px solid white;
+}
+
+.dark .Funeral_ompanies_pagination__zZ8wI li a {
+  border: 1px solid white;
+  color: white;
+}
+
+.dark .Funeral_ompanies_pagination__zZ8wI li.Funeral_ompanies_active__jqhOc a {
+  background-color: white;
+  color: #333;
+}
+
+.dark
+  .Funeral_ompanies_pagination__zZ8wI
+  li.Funeral_ompanies_active__jqhOc
+  a:hover {
+  color: white;
+}
+
+.dark .Funeral_ompanies_pagination__zZ8wI li a:hover {
+  background-color: #333;
+}
+
+input {
+  box-sizing: border-box;
+}
+a {
+  color: var(--text-color);
+  text-decoration: dashed;
+}
+/* img {
+  object-fit: cover;
+} */
+
+button:hover {
+  background: #f1a73f;
+}
+:root {
+  --accent-color: #dcaf71;
+  --text-color: #3b434e;
+  --text-list-color: #787d85;
+  --text-button-color: #ffffff;
+  --root-background: #e5e5e5;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2c3e50 #f1f1f1;
+}
+
+/* Стилизация скроллбара для Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #2c3e50;
+  border-radius: 6px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  margin-top: 30px;
+  padding: 30px;
+}
+
+.header li {
+  list-style-type: none;
+}
+
+/* .header h2 {
+  white-space: nowrap;
+} */
