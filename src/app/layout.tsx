@@ -27,12 +27,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+      </head>
       <body className={MontserratFamily.className}>
         <StoreProvider>
           {/* <Header /> */}
           {children}
         </StoreProvider>
       </body>
+      
     </html>
   );
 }
