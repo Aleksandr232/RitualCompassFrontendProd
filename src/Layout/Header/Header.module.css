@@ -12,6 +12,13 @@
   grid-area: navigation;
 }
 
+.logo{
+  width: 40px;
+  height: 100px;
+  position: relative;
+  bottom: 200px;
+  right: 160px;
+}
 .auth {
   grid-area: auth;
   display: flex;
