@@ -13,8 +13,9 @@ const Header: FC<IHeaderProps> = (props) => {
     <header className={styles.header} {...props}>
       <div className={styles.logo_wrapper}>
         {/* <Htag tag="h2">Оказание бесплатной ритуальной помощи в г.Казань</Htag> */}
+        <div style={{width: 20}}>
         <Icon/>
-
+        </div>
       </div>
 
       <nav className={styles.navigation}>
