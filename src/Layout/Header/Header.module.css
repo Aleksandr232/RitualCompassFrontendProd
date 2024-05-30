@@ -23,6 +23,7 @@
 .logo_wrapper {
   grid-area: logo;
   max-width: 360px;
+  background-image: url('../../../public/logo.png');
 }
 
 .header li {
