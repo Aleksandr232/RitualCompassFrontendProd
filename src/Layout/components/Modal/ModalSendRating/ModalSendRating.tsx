@@ -25,7 +25,7 @@ const ModalSendRating: FC<IModalQuickRatingRequest> = ({
 
     let { name, comment } = data;
     name = name || "Анонимный пользователь";
-    comment = comment || "Анонимный пользователь";
+    comment = comment || "Пользователь не оставил комментарий";
 
     if (ratings) {
       try {
