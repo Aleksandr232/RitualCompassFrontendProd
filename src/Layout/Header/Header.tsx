@@ -6,13 +6,14 @@ import ImgTag from "@/components/ImgTag/ImgTag";
 import Navigation from "../components/Navigation/Navigation";
 import AuthWrapper from "../components/AuthWrapper/AuthWrapper";
 
-
+import icon from '../../../public/iconritual.png';
 
 const Header: FC<IHeaderProps> = (props) => {
   return (
     <header className={styles.header} {...props}>
       <div className={styles.logo_wrapper}>
         {/* <Htag tag="h2">Оказание бесплатной ритуальной помощи в г.Казань</Htag> */}
+        <img src={icon} alt="" />
       </div>
 
       <nav className={styles.navigation}>
