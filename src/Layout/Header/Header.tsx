@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import Htag from "@/components/Htag/Htag";
 import Navigation from "../components/Navigation/Navigation";
 import AuthWrapper from "../components/AuthWrapper/AuthWrapper";
-import Icon from "../../../public/ritual.png";
+import Logo from "../../../public/logo.png";
 
 
 
@@ -14,7 +14,7 @@ const Header: FC<IHeaderProps> = (props) => {
     <header className={styles.header} {...props}>
       <div className={styles.logo_wrapper}>
         {/* <Htag tag="h2">Оказание бесплатной ритуальной помощи в г.Казань</Htag> */}
-        <Icon/>
+        <Logo/>
       </div>
 
       <nav className={styles.navigation}>
