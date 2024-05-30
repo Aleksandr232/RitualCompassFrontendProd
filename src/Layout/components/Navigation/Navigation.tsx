@@ -44,11 +44,11 @@ const Navigation: FC = () => {
       </div>
 
       <div className={styles.navigation_mobile}>
-        <button className={styles.burger_menu} onClick={toggleMenu}>
+        <div className={styles.burger_menu} onClick={toggleMenu}>
           <span className={styles.burger_line}></span>
           <span className={styles.burger_line}></span>
           <span className={styles.burger_line}></span>
-        </button>
+        </div>
 
         {isMenuOpen && (
           <ul className={`${styles.mobile_menu} ${!isMenuOpen ? styles.hidden : ''}`}>
