@@ -41,16 +41,26 @@
   
   .mobile_menu {
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
-    width: 100%;
+    width: 200px;
     background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     list-style-type: none;
     margin: 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    animation: slideDown 0.3s ease;
+    animation: slideInLeft 0.3s ease-in-out;
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
   
   .mobile_menu li {
@@ -61,7 +71,7 @@
     margin-bottom: 0;
   }
   
-  @keyframes slideDown {
+  /* @keyframes slideDown {
     0% {
       transform: translateY(-10%);
       opacity: 0;
@@ -70,6 +80,10 @@
       transform: translateY(0);
       opacity: 1;
     }
+  } */
+
+  .mobile_menu.hidden {
+    display: none;
   }
   
   @media (min-width: 768px) {

@@ -51,7 +51,7 @@ const Navigation: FC = () => {
         </button>
 
         {isMenuOpen && (
-          <ul className={styles.mobile_menu}>
+          <ul className={`${styles.mobile_menu} ${!isMenuOpen ? styles.hidden : ''}`}>
             <li>
               <LinkTag url={routers.home} appearance="ghost">
                 Главная
