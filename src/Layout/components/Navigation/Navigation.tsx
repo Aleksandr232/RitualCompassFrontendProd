@@ -1,3 +1,4 @@
+'use client'
 import { useState, FC } from "react";
 import styles from "./Navigation.module.css";
 import LinkTag from "@/components/LinkTag/LinkTag";
