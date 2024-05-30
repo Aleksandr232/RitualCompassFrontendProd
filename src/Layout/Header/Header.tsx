@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import Htag from "@/components/Htag/Htag";
 import Navigation from "../components/Navigation/Navigation";
 import AuthWrapper from "../components/AuthWrapper/AuthWrapper";
-import Icon from "../../../public/icon.svg";
+import Icon from "../../../public/ritual.png";
 
 
 
