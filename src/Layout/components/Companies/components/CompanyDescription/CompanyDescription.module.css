@@ -4,6 +4,16 @@
   gap: 20px;
 }
 
+.address{
+  position: relative;
+  width: 30px;
+}
+
+.work_time{
+  position: relative;
+  width: 30px;
+}
+
 @media (max-width: 735px) {
   .company_details {
     flex-direction: column;
