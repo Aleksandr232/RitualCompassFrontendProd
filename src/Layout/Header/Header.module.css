@@ -10,6 +10,8 @@
 
 .navigation {
   grid-area: navigation;
+  position: relative;
+  left: 150px;
 }
 
 .logo{
