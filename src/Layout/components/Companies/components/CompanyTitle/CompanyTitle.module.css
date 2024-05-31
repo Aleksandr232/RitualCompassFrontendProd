@@ -30,6 +30,11 @@
   width: 30px;
 }
 
+.feedback{
+  position: relative;
+  bottom: 10px;
+}
+
 .negative{
   position: relative;
   width: 30px;
