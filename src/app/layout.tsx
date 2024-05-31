@@ -27,6 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
+        <link rel="apple-icon" href="/apple-icon-57x57.png" />
+        <link rel="icon" type="image/png" sizes="152x152" href="/ms-icon-152x152.ico"/>
+      </head>
       <body className={MontserratFamily.className}>
         <StoreProvider>
           {/* <Header /> */}
