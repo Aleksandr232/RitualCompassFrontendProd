@@ -18,6 +18,12 @@
   align-items: flex-start;
   gap: 15px;
 }
+
+.rating_position{
+  position: relative;
+  left: 20px;
+}
+
 .show_reviews {
   display: flex;
   gap: 7px;

@@ -54,7 +54,9 @@ const CompanyTitle: FC<ICompanyTitleProps> = ({
         />
       </span>
 
-      <Ptag size="medium">Рейтинг: {average_rating} </Ptag>
+      <div className={styles.rating_position}>
+      <Ptag size="large">{average_rating} </Ptag>
+      </div>
       <Ptag size="medium">Положительных: {max_rating}</Ptag>
       <Ptag size="medium">Отрицательных: {min_rating}</Ptag>
       <Ptag size="medium">Всего: {total_rating_requests}</Ptag>
