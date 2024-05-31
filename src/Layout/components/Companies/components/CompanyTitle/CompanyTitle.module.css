@@ -21,7 +21,8 @@
 
 .rating_position{
   position: relative;
-  left: 20px;
+  left: 140px;
+  bottom: 170px;
 }
 
 .show_reviews {
