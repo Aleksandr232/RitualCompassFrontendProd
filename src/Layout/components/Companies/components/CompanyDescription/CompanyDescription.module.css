@@ -14,6 +14,11 @@
   width: 30px;
 }
 
+.service{
+  position: relative;
+  width: 30px;
+}
+
 @media (max-width: 735px) {
   .company_details {
     flex-direction: column;
