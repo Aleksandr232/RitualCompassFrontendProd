@@ -25,6 +25,16 @@
   bottom: 152px;
 }
 
+.positive{
+  position: relative;
+  width: 30px;
+}
+
+.negative{
+  position: relative;
+  width: 30px;
+}
+
 .show_reviews {
   display: flex;
   gap: 7px;
