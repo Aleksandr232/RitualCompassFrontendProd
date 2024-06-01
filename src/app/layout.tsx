@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Head from "next/head";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 // import Header from "@/Layout/Header/Header";
@@ -27,9 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <head>
-      <link type="image/png" sizes="120x120" rel="icon" href="/favicon.ico"/>
-      </head>
+      <Head>
+      <link type="image/png" sizes="120x120" rel="icon" href="/favicon-120x120.png"/>
+      </Head>
 
       <body className={MontserratFamily.className}>
         <StoreProvider>
