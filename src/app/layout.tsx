@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <Head>
-      <link type="image/png" sizes="120x120" rel="icon" href="/favicon-96x96.png"/>
+      <link rel="icon"  href="/favicon-96x96.png"/>
       </Head>
 
       <body className={MontserratFamily.className}>
