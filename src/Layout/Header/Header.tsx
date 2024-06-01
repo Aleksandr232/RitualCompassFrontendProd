@@ -15,7 +15,7 @@ const Header: FC<IHeaderProps> = (props) => {
       <div className={styles.logo_wrapper}>
         {/* <Htag tag="h2">Оказание бесплатной ритуальной помощи в г.Казань</Htag> */}
         <div className={styles.logo}>
-        <Logo/>
+        {/* <Logo/> */}
         </div>
         
       </div>
