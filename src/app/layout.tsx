@@ -47,8 +47,8 @@ export default function RootLayout({
       <link sizes="144x144" rel="apple-touch-icon" href="/apple-touch-icon-144x144.png"/>
       <link sizes="152x152" rel="apple-touch-icon" href="/apple-touch-icon-152x152.png"/>
       <link sizes="180x180" rel="apple-touch-icon" href="/apple-touch-icon-180x180.png"/>
-      <link color="#e52037" rel="mask-icon" href="/safari-pinned-tab.svg"/>
-      </head> */}
+      <link color="#e52037" rel="mask-icon" href="/safari-pinned-tab.svg"/> */}
+      </head>
 
       <body className={MontserratFamily.className}>
         <StoreProvider>
