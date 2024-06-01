@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="ru">
       <head>
       <link type="image/x-icon" rel="shortcut icon" href="/favicon.ico"/>
-      <link type="image/png" sizes="16x16" rel="icon" href="/favicon-16x16.png"/>
+     {/*  <link type="image/png" sizes="16x16" rel="icon" href="/favicon-16x16.png"/>
       <link type="image/png" sizes="32x32" rel="icon" href="/favicon-32x32.png"/>
       <link type="image/png" sizes="96x96" rel="icon" href="/favicon-96x96.png"/>
       <link type="image/png" sizes="120x120" rel="icon" href="/favicon-120x120.png"/>
@@ -47,9 +47,9 @@ export default function RootLayout({
       <link sizes="144x144" rel="apple-touch-icon" href="/apple-touch-icon-144x144.png"/>
       <link sizes="152x152" rel="apple-touch-icon" href="/apple-touch-icon-152x152.png"/>
       <link sizes="180x180" rel="apple-touch-icon" href="/apple-touch-icon-180x180.png"/>
-      <link color="#e52037" rel="mask-icon" href="/safari-pinned-tab.svg"/>
+      <link color="#e52037" rel="mask-icon" href="/safari-pinned-tab.svg"/> */}
       </head>
-      
+
       <body className={MontserratFamily.className}>
         <StoreProvider>
           {/* <Header /> */}
