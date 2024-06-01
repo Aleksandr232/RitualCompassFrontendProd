@@ -73,3 +73,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+
+@media (max-width: 735px) {
+  .feedback{
+    position: relative;
+    left: 170px;
+  }
+}

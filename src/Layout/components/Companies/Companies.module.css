@@ -134,6 +134,14 @@
     position: relative;
     right: 20px;
   }
+
+  .company_description {
+    position: relative;
+    bottom: 120px;
+    gap: 10px;
+  }
+
+
 }
 
 .custom-scrollbar::-webkit-scrollbar {

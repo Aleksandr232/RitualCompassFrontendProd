@@ -6,3 +6,8 @@
   margin-top: 20px;
 }
 
+@media (max-width: 735px) {
+  .contact {
+    margin-top: 70px;
+  }
+}
