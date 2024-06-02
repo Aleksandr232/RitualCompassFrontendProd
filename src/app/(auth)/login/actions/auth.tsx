@@ -52,7 +52,7 @@ export const signin = async (state: FormState, formData: FormData) => {
         // window.location.href = "/";
         try {
           const userInfoResponse = await fetch(
-            "http://localhost:8000/api/user",
+            "https://cz19567.tw1.ru/api/user",
             {
               headers: {
                 Authorization: `Bearer ${token}`,
