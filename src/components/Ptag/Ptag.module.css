@@ -4,6 +4,10 @@
   line-height: 1.5;
   text-align: left;
   word-break: break-all;
+  width: 100%;
+
+  word-break: break-all;
+  hyphens: auto;
 }
 
 .small {

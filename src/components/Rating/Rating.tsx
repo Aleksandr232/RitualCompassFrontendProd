@@ -62,7 +62,7 @@ function Rating({
   );
 
   return (
-    <span>
+    <span className={styles.rating_wrapper}>
       {ratingArray.map((star, i) => (
         <span onClick={() => putRating(i)} key={i}>
           {star}

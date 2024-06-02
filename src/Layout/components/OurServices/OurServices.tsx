@@ -18,14 +18,14 @@ const OurServices: FC = () => {
       <Htag tag={"h2"}>Услуги которые мы предоставляем</Htag>
       <div className={styles.service_box}>
         <div className={styles.service_item}>
-          <Htag tag={"h3"}>Помощь в поиске ритуальной компании или агента</Htag>
+          <Htag tag={"h2"}>Помощь в поиске ритуальной компании или агента</Htag>
           <Ptag size="medium">Мы все сделаем за вас</Ptag>
           <LinkTag url={routers.telephone} appearance={"medium"}>
             Позвонить
           </LinkTag>
         </div>
         <div className={styles.service_item}>
-          <Htag tag={"h3"}> Онлайн оформление</Htag>
+          <Htag tag={"h2"}> Онлайн оформление</Htag>
           <Ptag size="medium">
             Ваша заявка попадет сразу к нашим операторам и они с вами свяжутся
           </Ptag>
@@ -35,7 +35,7 @@ const OurServices: FC = () => {
           <ModalWindow isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
         </div>
         <div className={styles.service_item}>
-          <Htag tag={"h3"}>Бесплатная консультация</Htag>
+          <Htag tag={"h2"}>Бесплатная консультация</Htag>
           <Ptag size="medium">
             Куда идти, за что платить и что делать в случае смерти человека
           </Ptag>
@@ -44,7 +44,7 @@ const OurServices: FC = () => {
           </LinkTag>
         </div>
         <div className={styles.service_item}>
-          <Htag tag={"h3"}>Мгновенная помощь ( БОТ )</Htag>
+          <Htag tag={"h2"}>Мгновенная помощь ( БОТ )</Htag>
           <Ptag size="medium">
             Обратитесь к нашему онлайн помощнику и он ответит на вопросы
           </Ptag>

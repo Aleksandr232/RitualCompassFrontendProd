@@ -13,7 +13,9 @@ const Banner: FC = () => {
         <Ptag size="medium">
           Оказываем бесплатную информативную помощь по ритуальным услугам
         </Ptag>
-        <Telephone />
+        <span className={styles.content_telephone}>
+          <Telephone />
+        </span>
       </div>
       <Telephone />
     </div>

@@ -1,39 +1,19 @@
-.company_details {
+.description_wrapper {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
 
-.address{
-  position: relative;
-  width: 30px;
+.description_details {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
-.work_time{
-  position: relative;
-  width: 30px;
-}
-
-.service{
-  position: relative;
-  width: 30px;
-}
-
-.service_position{
-  position: relative;
-  left: 10px;
-  width: 280px;
-  top: 30px;
-}
-
-
-
-@media (max-width: 735px) {
-  .company_details {
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-  }
-
-
+.detail {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  max-width: 100%;
 }
