@@ -42,4 +42,7 @@
   .bannerContent {
     font-size: 1rem; /* Уменьшенный размер шрифта на маленьких экранах */
   }
+  .content_telephone {
+    display: none;
+  }
 }
