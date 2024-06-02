@@ -28,10 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <Head>
+      <head>
       <link rel="icon"  href="/favicon-96x96.png"/>
       <meta name="google-site-verification" content="qMkF8mo5iBwpHPxlXmL0mi098687P7dcsagc9TWvdvw" />
-      </Head>
+      </head>
 
       <body className={MontserratFamily.className}>
         <StoreProvider>
