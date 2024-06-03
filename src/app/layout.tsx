@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <head>
-      <link rel="icon"  href="/favicon-96x96.png"/>
+      <link rel="icon"  href="/favicon.ico"/>
       <meta name="google-site-verification" content="qMkF8mo5iBwpHPxlXmL0mi098687P7dcsagc9TWvdvw" />
       </head>
 
