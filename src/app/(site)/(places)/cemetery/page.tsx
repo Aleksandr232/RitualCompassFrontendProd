@@ -6,6 +6,7 @@ import PlacesNavigation from "../Layout/PlacesNavigation/PlacesNavigation";
 import { cemetery } from "./const/cemeteryPlaces";
 import { Metadata } from "next";
 import Header from "@/Layout/Header/Header";
+import Footer from "@/Layout/Footer/Footer";
 import PlacesItem from "../components/PlacesItem/PlacesItem";
 import styles from "./page.module.css";
 
@@ -31,6 +32,7 @@ export default function Cemetery() {
       <PlacesMain>
         <PlacesItem places={cemetery} />
       </PlacesMain>
+      <Footer/>
     </main>
   );
 }
