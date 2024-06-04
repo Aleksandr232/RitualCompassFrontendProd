@@ -31,6 +31,7 @@ export default function RootLayout({
       <head>
       <link rel="icon"  href="/favicon.ico"/>
       <meta name="google-site-verification" content="qMkF8mo5iBwpHPxlXmL0mi098687P7dcsagc9TWvdvw" />
+      <meta name="yandex-verification" content="714505a43000fc0f" />
       </head>
 
       <body className={MontserratFamily.className}>
