@@ -1,0 +1,15 @@
+User-agent: *
+Disallow:
+Sitemap: https://www.ritualcompass.com/sitemap.xml
+
+User-agent: Yandex
+Disallow:
+Sitemap: https://www.ritualcompass.com/sitemap.xml
+
+User-agent: Googlebot
+Disallow: 
+Sitemap: https://www.ritualcompass.com/sitemap.xml
+
+User-agent: Google
+Disallow: 
+Sitemap: https://www.ritualcompass.com/sitemap.xml
