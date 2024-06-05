@@ -1,13 +1,13 @@
 import Header from "@/Layout/Header/Header";
-import Footer from "@/Layout/Footer/Footer";
+
 import { Metadata } from "next";
 import styles from "./page.module.css";
 import AboutTitle from "./Layout/AboutTitle/AboutTitle";
 import Htag from "@/components/Htag/Htag";
-import Ptag from "@/components/Ptag/Ptag";
 import AboutMain from "./Layout/AboutMain/PlacesMain";
 import AboutList from "./components/AboutList/AboutList";
 import Telephone from "@/components/Telephone/Telephone";
+import Footer from "@/Layout/Footer/Footer";
 
 
 export const metadata: Metadata = {

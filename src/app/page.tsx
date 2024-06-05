@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Header from "@/Layout/Header/Header";
 import Main from "@/Layout/Main/Main";
 import Banner from "@/Layout/Banner/Banner";
+import Footer from "@/Layout/Footer/Footer";
 
 export default function Home() {
 
