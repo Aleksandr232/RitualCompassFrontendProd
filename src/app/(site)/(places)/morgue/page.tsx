@@ -1,4 +1,5 @@
 import Header from "@/Layout/Header/Header";
+import Footer from "@/Layout/Footer/Footer";
 import Htag from "@/components/Htag/Htag";
 import { Metadata } from "next";
 import PlacesHeader from "../Layout/PlacesHeader/PlacesHeader";
@@ -28,6 +29,7 @@ export default function Morgue() {
       <PlacesMain>
         <PlacesItem places={morgue} />
       </PlacesMain>
+      <Footer/>
     </main>
   );
 }

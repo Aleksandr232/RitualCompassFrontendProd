@@ -1,0 +1,28 @@
+.footer {
+    height: 200px;
+    width: 100%;
+    color: #3b434e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .privacyLink {
+    color: #3b434e;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .createdText {
+    font-size: 14px;
+  }
