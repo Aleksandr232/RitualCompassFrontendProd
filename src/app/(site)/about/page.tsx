@@ -28,11 +28,7 @@ export default function Morgue() {
       <AboutTitle>
         <Htag tag="h1">С чем мы помогаем ?</Htag>
         <Telephone />
-        <Ptag size="large">
-          {" "}
-          Мы оказываем бесплатную помощь в поиске проверенных ритуальных
-          компаний и агентов{" "}
-        </Ptag>
+        
       </AboutTitle>
 
       <AboutMain>

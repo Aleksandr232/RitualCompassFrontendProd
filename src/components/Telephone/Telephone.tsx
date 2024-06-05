@@ -1,9 +1,10 @@
 import { routers } from "@/utils/routers";
 import styles from "./Telephone.module.css";
 import { FC } from "react";
+import LinkTag from "../LinkTag/LinkTag";
 
 const Telephone: FC = () => {
-  return <span className={styles.telephone}>{routers.number}</span>;
+  return <LinkTag className={styles.telephone} appearance="ghost" url={routers.telephone}>{routers.number}</LinkTag>;
 };
 
 export default Telephone;

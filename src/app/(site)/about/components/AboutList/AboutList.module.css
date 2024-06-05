@@ -8,8 +8,14 @@
 
 .list > li {
   font-size: 2rem;
-  list-style-type: "✔";
+  list-style-type: "✔ ";
   border-radius: 8px;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list > li:hover {
+  border: none;
+  box-shadow: none;
+  list-style-type: none;
 }

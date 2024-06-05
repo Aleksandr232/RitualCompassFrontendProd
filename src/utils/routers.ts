@@ -5,7 +5,7 @@ export const routers = {
   login: "/login",
   about: "/about",
   registration: "/registration",
-  telephone: "tel:+1234567890",
-  number: "+123-456-78-90",
+  telephone: "tel:+79655873567",
+  number: "+7965-587-35-67",
   telegram: "https://t.me/DUSHARITUALBot",
 };
