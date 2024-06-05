@@ -3,7 +3,7 @@ import styles from "./AboutMain.module.css";
 import { IAboutMainProps } from "./AboutMain.props";
 
 const AboutMain: FC<IAboutMainProps> = ({ children }) => {
-  return <main className={styles.main}>{children}</main>;
+  return <div className={styles.main}>{children}</div>;
 };
 
 export default AboutMain;

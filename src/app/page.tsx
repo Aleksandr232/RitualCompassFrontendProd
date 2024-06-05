@@ -1,18 +1,10 @@
-"use client";
-
-import LikeDislike from "@/components/LikeDislike/LikeDislike";
 import styles from "./page.module.css";
-import Button from "@/components/Button/Button";
-import Rating from "@/components/Rating/Rating";
 import Header from "@/Layout/Header/Header";
 import Main from "@/Layout/Main/Main";
-import Footer from "@/Layout/Footer/Footer";
-import { useState } from "react";
-import Companies from "@/Layout/components/Companies/Companies";
 import Banner from "@/Layout/Banner/Banner";
+import Footer from "@/Layout/Footer/Footer";
 
 export default function Home() {
-  const [rating, setRating] = useState<number>(4);
 
   return (
     <main className={styles.main}>

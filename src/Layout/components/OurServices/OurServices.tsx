@@ -1,9 +1,9 @@
+"use client"
 import Htag from "@/components/Htag/Htag";
 import Ptag from "@/components/Ptag/Ptag";
 import { FC, useState } from "react";
 import styles from "./OurServices.module.css";
 import Button from "@/components/Button/Button";
-import Link from "next/link";
 import ModalWindow from "../Modal/ModalQuickRequest/ModalQuickRequest";
 import LinkTag from "@/components/LinkTag/LinkTag";
 import { routers } from "@/utils/routers";

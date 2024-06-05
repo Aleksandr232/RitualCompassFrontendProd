@@ -1,3 +1,4 @@
+"use client"
 import { FC, useState } from "react";
 import { useSpring, animated } from "@react-spring/web";
 import Ptag from "@/components/Ptag/Ptag";
