@@ -77,8 +77,8 @@ const Companies: FC<ICompaniesProps> = () => {
       <option value="" hidden>Сортировка по</option>
       <option value="rating">рейтингу</option>
       <option value="positive_reviews">положительным отзывам</option>
-      <option value="count_order">количиство оформлений</option>
-      <option value="count_call">количиство звонков</option>
+      <option value="count_order">количество оформлений</option>
+      <option value="count_call">количество звонков</option>
     </select>
     <div className={styles.select_arrow}>
       <svg
