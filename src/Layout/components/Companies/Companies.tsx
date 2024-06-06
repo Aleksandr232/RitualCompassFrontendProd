@@ -12,7 +12,9 @@ import CompanyDescription from "./components/CompanyDescription/CompanyDescripti
 import { ICompaniesProps } from "./Companies.props";
 
 const Companies: FC<ICompaniesProps> = () => {
-  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery();
+  const [selectedSort, setSelectedSort] = useState('');
+  const [sortByRating, setSortByRating] = useState(false);
+  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating });
   const [currentPage, setCurrentPage] = useState(0);
   const fadeIn = useSpring({
     opacity: companiesData ? 1 : 0,
@@ -35,6 +37,17 @@ const Companies: FC<ICompaniesProps> = () => {
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage
   );
+  
+
+  const handleSortChange = (event: { target: { value: string } }) => {
+    const selectedValue = event.target.value;
+    setSelectedSort(selectedValue);
+  
+    if (selectedValue === 'rating') {
+      setSortByRating((prevState) => !prevState);
+    }
+  };
+
   if (isLoading) {
     return <div>loading....</div>;
   }
@@ -49,6 +62,30 @@ const Companies: FC<ICompaniesProps> = () => {
 
   return (
     <div className={styles.companies}>
+      <div className={styles.select_wrapper}>
+    <select
+      className={styles.select}
+      value={selectedSort} 
+      onChange={handleSortChange}
+    >
+      <option value="" hidden>Сортировка по</option>
+      <option value="rating">рейтингу</option>
+    </select>
+    <div className={styles.select_arrow}>
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M7 10L12 15L17 10H7Z"
+          fill="#9CA3AF"
+        />
+      </svg>
+    </div>
+  </div>
       {displayedCompanies.map((company: ICompanyData) => {
         return (
           <animated.div style={fadeIn} key={company.id}>
