@@ -14,7 +14,10 @@ import { ICompaniesProps } from "./Companies.props";
 const Companies: FC<ICompaniesProps> = () => {
   const [selectedSort, setSelectedSort] = useState('');
   const [sortByRating, setSortByRating] = useState(false);
-  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating });
+  const [sortByPositiveReviews, setSortByPositiveReviews] = useState(false);
+  const [sortByCountOrder, setSortByCountOrder] = useState(false);
+  const [sortByCountCall, setSortByCountCall] = useState(false);
+  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating, sortByPositiveReviews, sortByCountOrder, sortByCountCall});
   const [currentPage, setCurrentPage] = useState(0);
   const fadeIn = useSpring({
     opacity: companiesData ? 1 : 0,
@@ -45,6 +48,12 @@ const Companies: FC<ICompaniesProps> = () => {
   
     if (selectedValue === 'rating') {
       setSortByRating((prevState) => !prevState);
+    }else if (selectedValue === 'positive_reviews'){
+      setSortByPositiveReviews((prevState) => !prevState);
+    }else if (selectedValue === 'count_order'){
+      setSortByCountOrder((prevState) => !prevState);
+    }else if(selectedValue === 'count_call'){
+      setSortByCountCall((prevState) => !prevState);
     }
   };
 
@@ -70,6 +79,9 @@ const Companies: FC<ICompaniesProps> = () => {
     >
       <option value="" hidden>Сортировка по</option>
       <option value="rating">рейтингу</option>
+      <option value="positive_reviews">положительным отзывам</option>
+      <option value="count_order">количиство оформлений</option>
+      <option value="count_call">количиство звонков</option>
     </select>
     <div className={styles.select_arrow}>
       <svg
