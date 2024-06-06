@@ -16,7 +16,7 @@ const ModalSendRating: FC<IModalQuickRatingRequest> = ({
 }) => {
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [isError, setIsError] = useState<boolean>(false);
-  const { refetch } = useGetCompanyAllQuery();
+  const { refetch } = useGetCompanyAllQuery({ sortByRating });;
 
   const submitForm = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
