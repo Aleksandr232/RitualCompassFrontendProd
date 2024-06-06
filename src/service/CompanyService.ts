@@ -7,8 +7,16 @@ export const companyApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: `${process.env.NEXT_PUBLIC_API_URL}` }),
   tagTypes: ['Company'],
   endpoints: (builder) => ({
-    getCompanyAll: builder.query<ICompanyData[], void>({
-      query: () => `api/all/rituals`,
+    getCompanyAll: builder.query<ICompanyData[], { sortByRating: boolean }>({
+      query: ({ sortByRating }) => {
+        let url = `api/all/rituals`;
+        if (sortByRating) {
+          url += '?sort_by_rating=true';
+        } else {
+          url += '?sort_by_rating=false';
+        }
+        return url;
+      },
     }),
 
     deleteCompany: builder.mutation<
