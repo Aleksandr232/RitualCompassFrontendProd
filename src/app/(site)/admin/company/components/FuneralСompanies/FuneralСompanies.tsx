@@ -18,7 +18,7 @@ const FuneralСompanies: FC<FuneralСompaniesProps> = () => {
     data: companiesData,
     isLoading: loadingCompanies,
     error: errorCompanies,
-  } = useGetCompanyAllQuery();
+  } = useGetCompanyAllQuery({ sortByRating: false });
   const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 3;
   if (!companiesData) {

@@ -12,7 +12,7 @@ import { IDeleteCompanyProps } from "./DeleteCompany.props";
 const DeleteCompany: FC<IDeleteCompanyProps> = ({ id }) => {
   const token = Cookies.get("token");
   const [deleteCompany, { isLoading, isError }] = useDeleteCompanyMutation();
-  const { refetch } = useGetCompanyAllQuery();
+  const { refetch } = useGetCompanyAllQuery({ sortByRating: false });
 
   const handleDeleteCompany = async () => {
     if (!token) return;

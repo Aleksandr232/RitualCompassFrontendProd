@@ -16,7 +16,7 @@ const ChangeCompany: FC<IChangeCompany> = (props) => {
   const [changeCompany, { isLoading }] = useChangeCompanyMutation();
   const [formData, setFormData] = useState(props);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const { refetch } = useGetCompanyAllQuery();
+  const { refetch } = useGetCompanyAllQuery({ sortByRating: false });
 
   useEffect(() => {
     const originalStyle = window.getComputedStyle(document.body).overflow;
