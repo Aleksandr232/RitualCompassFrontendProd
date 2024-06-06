@@ -9,30 +9,25 @@ export const companyApi = createApi({
   endpoints: (builder) => ({
     getCompanyAll: builder.query<ICompanyData[], { sortByRating?: boolean; sortByPositiveReviews?: boolean; sortByCountOrder?: boolean; sortByCountCall?: boolean }>({
       query: (params) => {
-        let url = 'api/all/rituals';
-        const queryParams = [];
+        const queryParams = new URLSearchParams();
     
         if (params.sortByRating !== undefined) {
-          queryParams.push(`sort_by_rating=${params.sortByRating}`);
+          queryParams.set('sort_by_rating', params.sortByRating.toString());
         }
     
         if (params.sortByPositiveReviews !== undefined) {
-          queryParams.push(`sort_by_positive_reviews=${params.sortByPositiveReviews}`);
+          queryParams.set('sort_by_positive_reviews', params.sortByPositiveReviews.toString());
         }
     
         if (params.sortByCountOrder !== undefined) {
-          queryParams.push(`sort_by_count_order=${params.sortByCountOrder}`);
+          queryParams.set('sort_by_count_order', params.sortByCountOrder.toString());
         }
     
         if (params.sortByCountCall !== undefined) {
-          queryParams.push(`sort_by_count_call=${params.sortByCountCall}`);
+          queryParams.set('sort_by_count_call', params.sortByCountCall.toString());
         }
     
-        if (queryParams.length > 0) {
-          url += `?${queryParams.join('&')}`;
-        }
-    
-        return url;
+        return `api/all/rituals?${queryParams.toString()}`;
       },
     }),
 

@@ -46,15 +46,10 @@ const Companies: FC<ICompaniesProps> = () => {
     const selectedValue = event.target.value;
     setSelectedSort(selectedValue);
   
-    if (selectedValue === 'rating') {
-      setSortByRating((prevState) => !prevState);
-    }else if (selectedValue === 'positive_reviews'){
-      setSortByPositiveReviews((prevState) => !prevState);
-    }else if (selectedValue === 'count_order'){
-      setSortByCountOrder((prevState) => !prevState);
-    }else if(selectedValue === 'count_call'){
-      setSortByCountCall((prevState) => !prevState);
-    }
+    setSortByRating(selectedValue === 'rating');
+    setSortByPositiveReviews(selectedValue === 'positive_reviews');
+    setSortByCountOrder(selectedValue === 'count_order');
+    setSortByCountCall(selectedValue === 'count_call');
   };
 
   if (isLoading) {
