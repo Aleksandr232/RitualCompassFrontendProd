@@ -34,6 +34,8 @@ const Companies: FC<ICompaniesProps> = () => {
 
   const handlePageClick = (event: { selected: number }) => {
     setCurrentPage(event.selected);
+    const scrollToY = (window.innerHeight / 0.6);
+    window.scrollTo(0, scrollToY);
   };
 
   const displayedCompanies = companiesData.slice(
