@@ -17,7 +17,7 @@ const Companies: FC<ICompaniesProps> = () => {
   const [sortByPositiveReviews, setSortByPositiveReviews] = useState(false);
   /* const [sortByCountOrder, setSortByCountOrder] = useState(false);
   const [sortByCountCall, setSortByCountCall] = useState(false); */
-  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating, sortByPositiveReviews, sortByCountOrder, sortByCountCall});
+  const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating, sortByPositiveReviews, /* sortByCountOrder, sortByCountCall */});
   const [currentPage, setCurrentPage] = useState(0);
   const fadeIn = useSpring({
     opacity: companiesData ? 1 : 0,
