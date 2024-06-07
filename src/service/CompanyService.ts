@@ -19,13 +19,13 @@ export const companyApi = createApi({
           queryParams.set('sort_by_positive_reviews', params.sortByPositiveReviews.toString());
         }
     
-        if (params.sortByCountOrder !== undefined) {
+        /* if (params.sortByCountOrder !== undefined) {
           queryParams.set('sort_by_count_order', params.sortByCountOrder.toString());
         }
     
         if (params.sortByCountCall !== undefined) {
           queryParams.set('sort_by_count_call', params.sortByCountCall.toString());
-        }
+        } */
     
         return `api/all/rituals?${queryParams.toString()}`;
       },

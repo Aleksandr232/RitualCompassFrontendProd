@@ -15,8 +15,8 @@ const Companies: FC<ICompaniesProps> = () => {
   const [selectedSort, setSelectedSort] = useState('');
   const [sortByRating, setSortByRating] = useState(false);
   const [sortByPositiveReviews, setSortByPositiveReviews] = useState(false);
-  const [sortByCountOrder, setSortByCountOrder] = useState(false);
-  const [sortByCountCall, setSortByCountCall] = useState(false);
+  /* const [sortByCountOrder, setSortByCountOrder] = useState(false);
+  const [sortByCountCall, setSortByCountCall] = useState(false); */
   const { data: companiesData, isLoading, error } = useGetCompanyAllQuery({ sortByRating, sortByPositiveReviews, sortByCountOrder, sortByCountCall});
   const [currentPage, setCurrentPage] = useState(0);
   const fadeIn = useSpring({
@@ -50,8 +50,8 @@ const Companies: FC<ICompaniesProps> = () => {
   
     setSortByRating(selectedValue === 'rating');
     setSortByPositiveReviews(selectedValue === 'positive_reviews');
-    setSortByCountOrder(selectedValue === 'count_order');
-    setSortByCountCall(selectedValue === 'count_call');
+    /* setSortByCountOrder(selectedValue === 'count_order');
+    setSortByCountCall(selectedValue === 'count_call'); */
   };
 
   if (isLoading) {
@@ -77,8 +77,8 @@ const Companies: FC<ICompaniesProps> = () => {
       <option value="" hidden>Сортировка по</option>
       <option value="rating">рейтингу</option>
       <option value="positive_reviews">положительным отзывам</option>
-      <option value="count_order">количество оформлений</option>
-      <option value="count_call">количество звонков</option>
+      {/* <option value="count_order">количество оформлений</option>
+      <option value="count_call">количество звонков</option> */}
     </select>
     <div className={styles.select_arrow}>
       <svg
