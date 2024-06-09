@@ -8,13 +8,11 @@ import AboutHeaderSlug from "./Layout/AboutHeaderSlug/AboutHeaderSlug";
 import AboutMainSlug from "./Layout/AboutMainSlug/AboutMainSlug";
 import Footer from "@/Layout/Footer/Footer";
 
-type generateMetadataProps = {
-  params: { slug: IAboutSlugProps };
-};
-
 export async function generateMetadata({
   params,
-}: generateMetadataProps): Promise<Metadata> {
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
   const post: IAboutSlugProps = await fetchAboutRequest(
     `${API.params.aboutSlug}/${params.slug}`
   );
@@ -26,12 +24,11 @@ export async function generateMetadata({
   };
 }
 
-export const AboutPostPage = async ({
+export default async function AboutPostPage({
   params,
 }: {
   params: { slug: string };
-}) => {
-
+}) {
   const post: IAboutSlugProps = await fetchAboutRequest(
     `${API.params.aboutSlug}/${params.slug}`
   );
@@ -46,9 +43,7 @@ export const AboutPostPage = async ({
           key={post.id}
         />
       </AboutMain>
-      <Footer/>
+      <Footer />
     </main>
   );
-};
-
-export default AboutPostPage;
+}
