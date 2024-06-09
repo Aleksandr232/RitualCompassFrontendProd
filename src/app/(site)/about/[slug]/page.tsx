@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+import {Metadata } from "next";
 import styles from "../page.module.css";
 import fetchAboutRequest from "@/helpers/fetchAboutRequest/fetchAboutRequest";
 import API from "@/utils/api/api";
@@ -26,12 +26,7 @@ export async function generateMetadata({
   };
 }
 
-export const AboutPostPage = async ({
-  params,
-}: {
-  params: { slug: string };
-}) => {
-
+const AboutPostPage = async ({ params }: { params: { slug: string } }) => {
   const post: IAboutSlugProps = await fetchAboutRequest(
     `${API.params.aboutSlug}/${params.slug}`
   );
@@ -46,7 +41,7 @@ export const AboutPostPage = async ({
           key={post.id}
         />
       </AboutMain>
-      <Footer/>
+      <Footer />
     </main>
   );
 };
