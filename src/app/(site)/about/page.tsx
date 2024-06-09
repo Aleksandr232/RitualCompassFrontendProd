@@ -1,18 +1,21 @@
 import Header from "@/Layout/Header/Header";
-
 import { Metadata } from "next";
 import styles from "./page.module.css";
 import AboutTitle from "./Layout/AboutTitle/AboutTitle";
 import Htag from "@/components/Htag/Htag";
 import AboutMain from "./Layout/AboutMain/PlacesMain";
-import AboutList from "./components/AboutList/AboutList";
 import Telephone from "@/components/Telephone/Telephone";
 import Footer from "@/Layout/Footer/Footer";
-
+import AboutList from "./components/AboutList/AboutList";
+import { FC } from "react";
+import fetchAboutRequest from "@/helpers/fetchAboutRequest/fetchAboutRequest";
+import API from "@/utils/api/api";
+import { IAboutSlugProps } from "@/interface/interface.slug";
 
 export const metadata: Metadata = {
-  title: "Памятники Ритуальные услуги в Казани",
-  description: "Какие ритуальные услуги выбрать в Казани?",
+  title: "Ритуальные услуги в Казани",
+  description:
+    "Оказываем бесплатную помощь в поиске проверенных ритуальных компаний",
   keywords: [
     "Ритуальные услуги",
     "Организация похорон в Казани",
@@ -23,20 +26,25 @@ export const metadata: Metadata = {
     "Что делать, если умер человек?",
   ],
 };
-export default function Morgue() {
+
+
+const About: FC = async () => {
+  const posts: IAboutSlugProps[] = await fetchAboutRequest<IAboutSlugProps[]>(API.params.aboutSlug);
+
   return (
     <main className={styles.main}>
       <Header />
       <AboutTitle>
         <Htag tag="h1">С чем мы помогаем ?</Htag>
         <Telephone />
-        
       </AboutTitle>
 
       <AboutMain>
-        <AboutList />
+        <AboutList posts={posts} />
       </AboutMain>
-      <Footer/>
+      <Footer />
     </main>
   );
-}
+};
+
+export default About;

@@ -1,20 +1,24 @@
-"use client";
-import { usePathname } from "next/navigation";
-import CanWeHelp from "../../../components/CanWeHelp/CanWeHelp";
-import { HelpersItemsQuestions } from "../../const";
+import { IAboutSlugProps } from "@/interface/interface.slug";
+import { FC } from "react";
+import styles from "./AboutMainSlug.module.css";
+import Htag from "@/components/Htag/Htag";
+import Ptag from "@/components/Ptag/Ptag";
+import LinkTag from "@/components/LinkTag/LinkTag";
+import { routers } from "@/utils/routers";
 
-import styles from './AboutMainSlug.module.css'
+const AboutMainSlug: FC<Partial<IAboutSlugProps>> = ({ description, title }) => {
+  
+  const points = description?.split(')');
+  console.log(points);
+  
 
-const AboutMainSlug = () => {
-  const pathname = usePathname();
-  const HelpersItems = HelpersItemsQuestions.filter((i) =>
-    i.slug.includes(pathname)
-  );
   return (
     <div className={styles.main}>
-      {HelpersItems.map((i) => (
-        <CanWeHelp key={i.slug} description={i.description} title={i.title} />
+      <Htag tag="h2">{title}</Htag>
+      {points?.map((point, index) => (
+        <Ptag key={index} size="medium">{point}</Ptag>
       ))}
+      <LinkTag appearance="medium" url={routers.about}>Назад</LinkTag>
     </div>
   );
 };

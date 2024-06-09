@@ -4,7 +4,7 @@ import { IAboutTitleProps } from "./AboutTitle.props";
 
 
 const AboutTitle: FC<IAboutTitleProps> = ({ children }) => {
-  return <header className={styles.header}>{children}</header>;
+  return <div className={styles.header}>{children}</div>;
 };
 
 export default AboutTitle;
