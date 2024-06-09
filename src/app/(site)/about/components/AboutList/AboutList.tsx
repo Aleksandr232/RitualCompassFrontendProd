@@ -1,16 +1,16 @@
 import { FC } from "react";
 import styles from "./AboutList.module.css";
 import LinkTag from "@/components/LinkTag/LinkTag";
-import { HelpersItemsQuestions } from "../../[slug]/const";
+import { IAboutListProps } from "@/interface/interface.slug";
 
 
-const AboutList: FC = () => {
+const AboutList: FC<IAboutListProps> = ({ posts }) => {
   return (
     <ul className={styles.list}>
-      {HelpersItemsQuestions.map((item) => (
-        <li key={item.slug}>
-          <LinkTag url={item.slug} appearance={"ghost"}>
-            {item.title}
+      {posts.map((post) => (
+        <li key={post.slug}>
+          <LinkTag url={`about/${post.slug}`} appearance={"ghost"}>
+            {post.title}
           </LinkTag>
         </li>
       ))}

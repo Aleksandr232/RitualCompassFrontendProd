@@ -11,6 +11,9 @@ const API = {
     quick_request_company: process.env.NEXT_PUBLIC_API_URL + `/api/question`,
     rating_request : process.env.NEXT_PUBLIC_API_URL + '/api/rating'
   },
+  params : {
+    aboutSlug : 'https://cz19567.tw1.ru/api/about'
+  }
 };
 
 export default API;
