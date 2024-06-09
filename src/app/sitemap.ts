@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: 'https://www.ritualcompass.com/about/what-to-do-if-someone-dies',
+      url: 'https://www.ritualcompass.com/about/what-to-do-if-someone-diesn',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.5,
