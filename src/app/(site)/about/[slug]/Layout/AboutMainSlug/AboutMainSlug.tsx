@@ -8,7 +8,7 @@ import { routers } from "@/utils/routers";
 
 const AboutMainSlug: FC<Partial<IAboutSlugProps>> = ({ description, title }) => {
   
-  const points = description?.split(')');
+  const points = description;
   console.log(points);
   
 
