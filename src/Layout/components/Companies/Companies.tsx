@@ -104,7 +104,7 @@ const Companies: FC<ICompaniesProps> = () => {
                   url={`${company.paths[0]}`}
                   height={300}
                   width={300}
-                  alt="company"
+                  alt={`${company.company_ritual}`}
                 />
               </div>
               <div className={styles.company_title}>
