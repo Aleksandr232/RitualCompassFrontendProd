@@ -7,10 +7,7 @@ import LinkTag from "@/components/LinkTag/LinkTag";
 import { routers } from "@/utils/routers";
 
 const AboutMainSlug: FC<Partial<IAboutSlugProps>> = ({ description, title }) => {
-  
-  const points = description;
-  console.log(points);
-  
+  const points = typeof description === 'string' ? description.split('\n') : description;
 
   return (
     <div className={styles.main}>
@@ -23,4 +20,4 @@ const AboutMainSlug: FC<Partial<IAboutSlugProps>> = ({ description, title }) => 
   );
 };
 
-export default AboutMainSlug;
+export default AboutMainSlug
