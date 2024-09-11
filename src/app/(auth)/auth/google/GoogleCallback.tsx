@@ -25,7 +25,7 @@ function GoogleCallback() {
     // Функция для взаимодействия с вашим backend'ом для обработки ответа от Google
     const fetchData = async () => {
       const querystring = toQueryString(router.query); // Преобразование объекта query в строку запроса
-      const url = `http://localhost:3000/api/auth/callback?${querystring}`;
+      const url = `https://cz19567.tw1.ru/auth/callback?${querystring}`;
       try {
         const response = await fetch(url, {
           headers: {
