@@ -1,6 +1,6 @@
 "use client";
 import GoogleSigninButton from "./google/GoogleSigninButton";
-import GoogleCallback from "./google/GoogleCallback";
+import GoogleCallback from "./google/callback/GoogleCallback";
 
 export default function GoogleAuth() {
   return (
