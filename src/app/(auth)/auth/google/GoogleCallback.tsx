@@ -28,7 +28,6 @@ function GoogleCallback() {
       const url = `https://cz19567.tw1.ru/api/auth/callback?${querystring}`;
       try {
         const response = await fetch(url, {
-          method: 'POST',
           headers: {
             "Content-Type": "application/json",
             Accept: "application/json",
