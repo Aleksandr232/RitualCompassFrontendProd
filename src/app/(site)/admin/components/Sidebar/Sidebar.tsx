@@ -73,8 +73,6 @@ const Sidebar = () => {
             <li className={styles.menuItem}>
               <Link href="/admin/company">Добавить компанию</Link>
             </li>
-          </ul>
-          <ul className={styles.menu}>
             <li className={styles.menuItem}>
               <Link href="/admin/company">Добавить пост</Link>
             </li>
