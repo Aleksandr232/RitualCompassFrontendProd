@@ -76,7 +76,7 @@ const Sidebar = () => {
           </ul>
           <ul className={styles.menu}>
             <li className={styles.menuItem}>
-              <Link href="">Добавить пост</Link>
+              <Link href="/admin/company">Добавить пост</Link>
             </li>
           </ul>
         </div>
