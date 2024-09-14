@@ -15,7 +15,7 @@ const AddBlogForm: FC<IAddCompanyForm> = ({
 }) => {
   const [text, setText] = useState('');
 
-  const handleTextChange = (value) => {
+  const handleTextChange = (value:string) => {
     setText(value);
   };
 
