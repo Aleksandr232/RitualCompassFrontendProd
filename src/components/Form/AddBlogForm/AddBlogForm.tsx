@@ -51,7 +51,7 @@ const AddBlogForm: FC<IAddCompanyForm> = ({
             boxSizing: 'border-box',
           }}
           id="description"
-          name="description"
+          
         />
       </label>
       <label htmlFor="company_ritual">
