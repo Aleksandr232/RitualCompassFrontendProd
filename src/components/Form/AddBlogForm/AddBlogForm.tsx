@@ -31,7 +31,7 @@ const AddBlogForm: FC<IAddCompanyForm> = ({
 
       <label htmlFor="description_ritual">
         Описание поста:
-        {typeof window !== 'undefined' && (
+ 
         <ReactQuill
           value={text}
           onChange={handleTextChange}
@@ -51,9 +51,9 @@ const AddBlogForm: FC<IAddCompanyForm> = ({
             padding: '10px',
             boxSizing: 'border-box',
           }}
-          id="description"
           
-        />)}
+          
+        />
       </label>
       <label htmlFor="company_ritual">
         seo title
