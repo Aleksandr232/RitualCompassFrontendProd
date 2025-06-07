@@ -1,4 +1,4 @@
-import { Button } from "@/shared/ui/button";
+import { Button } from "@/shared/ui/button/button";
 import { Main } from "@/widgets/user/Main";
 import { useState } from "react";
 
@@ -7,8 +7,7 @@ export function Root() {
 
   return (
     <>
-      <div></div>
-      <h1>Vite + React</h1>
+      <h1 className="h1">Vite + React</h1>
       <div className="card">
         <Button onClick={() => setCount((count) => count + 1)}>
           count is {count}
