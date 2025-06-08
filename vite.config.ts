@@ -2,9 +2,14 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    TanStackRouterVite({ target: "react", autoCodeSplitting: true }),
+    react(),
+    tailwindcss(),
+  ],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -21,5 +26,12 @@ export default defineConfig({
       },
     },
     devSourcemap: true,
+  },
+
+  server: {
+    port: 3000,
+  },
+  preview: {
+    port: 3000,
   },
 });
