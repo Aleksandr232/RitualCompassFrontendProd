@@ -1,0 +1,75 @@
+// Цветовая палитра для ритуального сервиса
+:root {
+  // Основные цвета
+  --color-primary: #2c3e50;
+  --color-secondary: #34495e;
+  --color-accent: #7f8c8d;
+
+  // Нейтральные цвета
+  --color-background: #f3eeee;
+  --color-second-background: #f1efef;
+  --color-surface: #f5f6fa;
+  --color-border: #e5e9f2;
+
+  // Текстовые цвета
+  --color-text-primary: #2c3e50;
+  --color-text-secondary: #7f8c8d;
+  --color-text-muted: #95a5a6;
+
+  // Семантические цвета
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-error: #e74c3c;
+  --color-info: #3498db;
+
+  // Размеры
+  --spacing-unit: 8px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  // Тени
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  // Типографика
+  --font-family-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-secondary: "Playfair Display", serif;
+
+  // Размеры шрифтов
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  --font-size-3xl: 30px;
+  --font-size-4xl: 36px;
+
+  // Веса шрифтов
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  // Высота строк
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+}
+
+// Тёмная тема
+[data-theme="dark"] {
+  --color-background: #1a1a1a;
+  --color-surface: #2c2c2c;
+  --color-border: #404040;
+
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-muted: #808080;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.3);
+}

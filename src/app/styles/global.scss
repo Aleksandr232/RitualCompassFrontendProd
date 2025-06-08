@@ -1,44 +1,142 @@
-@use "@/app/styles/mixins.scss" as *;
+@use "mixins" as *;
+@use "theme" as *;
 
-a {
-  text-decoration: none;
-  color: inherit;
+// Сброс стилей
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 500;
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Типографика
 h1,
 .h1 {
-  @include fluid-text(60, 43);
+  @include fluid-text(48, 36);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: calc(var(--spacing-unit) * 3);
 }
 
 h2,
 .h2 {
-  @include fluid-text(40, 36);
+  @include fluid-text(36, 30);
+  font-family: var(--font-family-secondary);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: calc(var(--spacing-unit) * 2.5);
 }
 
 h3,
 .h3 {
-  @include fluid-text(30, 26);
+  @include fluid-text(30, 24);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
 h4,
 .h4 {
-  @include fluid-text(20, 18);
+  @include fluid-text(24, 20);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-tight);
+  margin-bottom: calc(var(--spacing-unit) * 2);
 }
 
-button,
+p {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+// Ссылки
 a {
-  cursor: pointer;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--color-secondary);
+  }
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+// Кнопки
+button {
+  cursor: pointer;
+  font-family: var(--font-family-primary);
+}
+
+// Формы
+input,
+textarea,
+select {
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-md);
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: calc(var(--spacing-unit) * 1.5);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(44, 62, 80, 0.1);
+  }
+
+  &::placeholder {
+    color: var(--color-text-muted);
+  }
+}
+
+// Утилиты
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 calc(var(--spacing-unit) * 2);
+}
+
+// Анимации
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+// Медиа-запросы
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 calc(var(--spacing-unit) * 1.5);
+  }
 }
