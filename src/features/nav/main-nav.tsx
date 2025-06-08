@@ -7,19 +7,14 @@ import {
   NavigationMenuContent,
   NavigationMenuLink,
 } from "@/shared/ui/navigation-menu";
-import {
-  Link,
-  CircleHelpIcon,
-  CircleIcon,
-  CircleCheckIcon,
-  Plus,
-} from "lucide-react";
+import { Link, Plus } from "lucide-react";
 import { components } from "./config";
+import styles from "./index.module.scss";
 
 export function MainNav() {
   return (
-    <NavigationMenu viewport={false}>
-      <NavigationMenuList>
+    <NavigationMenu className={styles.nav} viewport={false}>
+      <NavigationMenuList className={styles.navList}>
         <FuneralServices />
         <About />
 
@@ -31,6 +26,7 @@ export function MainNav() {
     </NavigationMenu>
   );
 }
+
 function ListItem({
   title,
   children,
@@ -40,7 +36,7 @@ function ListItem({
   return (
     <li {...props}>
       <NavigationMenuLink asChild>
-        <Link href={href}>
+        <Link href={href} className={styles.menuLink}>
           <div className="text-sm leading-none font-medium">{title}</div>
           <p className="text-muted-foreground line-clamp-2 text-sm leading-snug">
             {children}
@@ -53,9 +49,9 @@ function ListItem({
 
 function FuneralServices() {
   return (
-    <NavigationMenuItem>
+    <NavigationMenuItem className={styles.menuItem}>
       <NavigationMenuTrigger>Ритуальные услуги</NavigationMenuTrigger>
-      <NavigationMenuContent>
+      <NavigationMenuContent className={styles.menuContent}>
         <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
           <li className="row-span-3">
             <NavigationMenuLink asChild>
@@ -87,9 +83,9 @@ function FuneralServices() {
 
 function About() {
   return (
-    <NavigationMenuItem>
+    <NavigationMenuItem className={styles.menuItem}>
       <NavigationMenuTrigger>О нас</NavigationMenuTrigger>
-      <NavigationMenuContent>
+      <NavigationMenuContent className={styles.menuContent}>
         <ul className="grid w-[400px] gap-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
           {components.map((component) => (
             <ListItem
@@ -110,13 +106,13 @@ function CemeteryAddresses() {
   return (
     <>
       <NavigationMenuItem></NavigationMenuItem>
-      <NavigationMenuItem>
-        <NavigationMenuTrigger>Адреса кладбищ </NavigationMenuTrigger>
-        <NavigationMenuContent>
+      <NavigationMenuItem className={styles.menuItem}>
+        <NavigationMenuTrigger>Адреса кладбищ</NavigationMenuTrigger>
+        <NavigationMenuContent className={styles.menuContent}>
           <ul className="grid w-[300px] gap-4">
             <li>
               <NavigationMenuLink asChild>
-                <Link href="#">
+                <Link href="#" className={styles.menuLink}>
                   <div className="font-medium">Components</div>
                   <div className="text-muted-foreground">
                     Browse all components in the library.
@@ -124,7 +120,7 @@ function CemeteryAddresses() {
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild>
-                <Link href="#">
+                <Link href="#" className={styles.menuLink}>
                   <div className="font-medium">Documentation</div>
                   <div className="text-muted-foreground">
                     Learn how to use the library.
@@ -132,7 +128,7 @@ function CemeteryAddresses() {
                 </Link>
               </NavigationMenuLink>
               <NavigationMenuLink asChild>
-                <Link href="#">
+                <Link href="#" className={styles.menuLink}>
                   <div className="font-medium">Blog</div>
                   <div className="text-muted-foreground">
                     Read our latest blog posts.
