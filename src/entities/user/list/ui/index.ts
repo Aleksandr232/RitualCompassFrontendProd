@@ -1,1 +1,0 @@
-export { ListUser } from "./List";

@@ -1,4 +1,4 @@
-import { MainPage } from "@/pages/user/main";
+import { MainPage } from "@/pages/user";
 
 export function Root() {
   return (
