@@ -8,8 +8,8 @@ import {
   NavigationMenuLink,
 } from "@/shared/ui/navigation-menu";
 import { Link, Plus } from "lucide-react";
-import { components } from "./config";
 import styles from "./index.module.scss";
+import { components } from "./nav.consts";
 
 export function MainNav() {
   return (

@@ -1,4 +1,4 @@
-import { MainNav } from "@/features/nav/main-nav";
+import { MainNav } from "@/pages/user/ui/nav/main-nav";
 import styles from "./index.module.scss";
 import Img from "/bgc.png";
 
